@@ -31,6 +31,12 @@
             android:name=".MainActivity"
             android:exported="true">
         </activity>
+
+        <!--Naver Maps's Client ID -->
+        <meta-data
+            android:name = "com.naver.maps.map.CLIENT_ID"
+            android:value = "fd9mxj68f8">
+        </meta-data>
     </application>
 
 </manifest>
