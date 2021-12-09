@@ -2,13 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/login_toolbar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/login_toolbar"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -21,7 +20,7 @@
     <EditText
         android:id="@+id/login_id"
         android:layout_width="wrap_content"
-        android:layout_height="48"
+        android:layout_height="48dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="10dp"
         android:ems="10"
@@ -30,12 +29,12 @@
         app:layout_constraintBottom_toTopOf="@+id/login_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/login_toolbar" />
 
     <EditText
         android:id="@+id/login_password"
         android:layout_width="wrap_content"
-        android:layout_height="48"
+        android:layout_height="48dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="500dp"
         android:ems="10"
@@ -47,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/login_id" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -56,12 +55,12 @@
         android:layout_marginBottom="397dp"
         android:text="로그인"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnReg"
+        app:layout_constraintEnd_toStartOf="@+id/btn_reg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_password" />
 
     <Button
-        android:id="@+id/btnReg"
+        android:id="@+id/btn_reg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -71,6 +70,6 @@
         android:text="회원가입"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnLogin"
+        app:layout_constraintStart_toEndOf="@+id/btn_login"
         app:layout_constraintTop_toBottomOf="@+id/login_password" />
 </androidx.constraintlayout.widget.ConstraintLayout>
