@@ -11,12 +11,23 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
-    View navi_header_view;
+
+    private ListView listView;
+    private ShopListAdapter adapter;
+    private List<Shop> shopList;
+
     DrawerLayout drawerLayout;
     NavigationView navigationView;
 
@@ -47,6 +58,39 @@ public class MainActivity extends AppCompatActivity {
         //    Intent intent = getIntent();
         //    String userID = intent.getStringExtra("userID");
          //   tv_name.setText(userID); }
+
+        //매장정보 List
+        Intent intent = getIntent();
+        listView = (ListView) findViewById(R.id.Listview_store);
+        shopList  = new ArrayList<Shop>();
+
+        //Adapter 초기화
+        adapter = new ShopListAdapter(getApplicationContext(),shopList);
+        listView.setAdapter(adapter);
+
+        try {
+            JSONObject jsonObject = new JSONObject(intent.getStringExtra("shopList"));
+
+            JSONArray jsonArray = jsonObject.getJSONArray("response");
+            int count = 0;
+
+            String ShopName, ShopLocation, ShopOpentime, ShopCloseTime;
+
+            while(count<jsonArray.length()){
+                JSONObject object = jsonArray.getJSONObject(count);
+                ShopName = object.getString("S_NAME");
+                ShopLocation = object.getString("S_LOCATION");
+                ShopOpentime = object.getString("S_OPENTIME");
+                ShopCloseTime = object.getString("S_CLOSETIME");
+
+                Shop shop = new Shop(ShopName, ShopLocation, ShopOpentime, ShopCloseTime);
+                shopList.add(shop);
+                count++;
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     } //onCreate 끝
 
     @Override
