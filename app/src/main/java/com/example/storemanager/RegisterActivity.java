@@ -27,11 +27,13 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) { //Activity 시작되고 처음으로 실행되는 부분
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        //Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.register_toolbar);
         setSupportActionBar(toolbar);
 
         //각 Component id값 찾아주기
-        input_id = findViewById(R.id.input_id);
+        input_id = findViewById(R .id.input_id);
         input_password = findViewById(R.id.input_password);
         input_name = findViewById(R.id.input_name);
         input_email = findViewById(R.id.input_email);

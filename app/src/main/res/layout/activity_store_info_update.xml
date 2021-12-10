@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoreInfoUpdateActivity">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/storeinfo_toolbar"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="?attr/colorPrimary"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="?attr/actionBarTheme"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:title="매장정보 입력" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="40dp"
+      android:layout_marginEnd="10dp"
+      app:counterEnabled="true"
+      app:counterMaxLength="20"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/storeinfo_toolbar">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_storeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="매장 이름" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout7"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:inputType="none"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+    <AutoCompleteTextView
+        android:id="@+id/et_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:hint="카테고리" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      app:counterEnabled="true"
+      app:counterMaxLength="50"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_Addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="주소" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout3"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      app:counterEnabled="true"
+      app:counterMaxLength="10"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_RegNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="사업자번호( - 없이)"
+        android:inputType="number" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout4"
+      android:layout_width="173dp"
+      android:layout_height="55dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="1dp"
+      app:counterEnabled="true"
+      app:counterMaxLength="2"
+      app:layout_constraintEnd_toStartOf="@+id/textInputLayout5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_openHour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="오픈시간 (시)"
+        android:inputType="number" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout5"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      app:counterEnabled="true"
+      app:counterMaxLength="2"
+      app:layout_constraintBottom_toBottomOf="@+id/textInputLayout4"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/textInputLayout4"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_openMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="오픈시간 (분)"
+        android:inputType="number"
+        android:text="00" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout6"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      app:counterEnabled="true"
+      app:counterMaxLength="2"
+      app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_closeHour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="닫는시간 (시)"
+        android:inputType="number" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      app:counterEnabled="true"
+      app:counterMaxLength="2"
+      app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+      app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_closeMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="닫는시간 (분)"
+        android:inputType="number"
+        android:text="00" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <Button
+      android:id="@+id/btn_update"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="10dp"
+      android:text="완료"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,13 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/item_info"
+        android:id="@+id/item_home"
         android:icon="@drawable/ic_baseline_people_24"
-        android:title="내 정보" />
-    <item
-        android:id="@+id/item_aroundstore"
-        android:icon="@drawable/ic_baseline_map_24"
-        android:title="주변매장" />
+        android:title="홈 화면" />
     <item
         android:id="@+id/item_predict"
         android:icon="@drawable/ic_baseline_timeline_24"

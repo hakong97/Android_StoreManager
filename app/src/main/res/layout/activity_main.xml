@@ -37,8 +37,8 @@
 
         <ListView
             android:id="@+id/Listview_store"
-            android:layout_width="391dp"
-            android:layout_height="386dp"
+            android:layout_width="396dp"
+            android:layout_height="333dp"
             android:layout_marginBottom="1dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
