@@ -6,6 +6,10 @@
         android:icon="@drawable/ic_baseline_people_24"
         android:title="홈 화면" />
     <item
+        android:id="@+id/item_inventory"
+        android:icon="@drawable/ic_baseline_format_list_numbered_rtl_24"
+        android:title="재고 관리"/>
+    <item
         android:id="@+id/item_predict"
         android:icon="@drawable/ic_baseline_timeline_24"
         android:title="매출예측" />

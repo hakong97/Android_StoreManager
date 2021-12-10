@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.storemanager" >
+    package="com.example.storemanager">
     <!-- 인터넷 권한 Permission -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,13 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StoreManager"
-        android:usesCleartextTraffic="true" >
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".InventoryActivity"
+            android:exported="false" />
         <activity
             android:name=".StoreInfoUpdateActivity"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" >
+            android:exported="true">
 
             <!-- 제일 먼저 실행될 Activity 지정 -->
             <intent-filter>
