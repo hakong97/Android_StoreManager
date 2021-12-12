@@ -10,26 +10,26 @@ import org.w3c.dom.Text;
 
 import java.util.List;
 
-public class InventoryAdapter extends BaseAdapter {
+public class InvListAdapter extends BaseAdapter {
 
     private Context context;
-    private List<Inventory> inventoryList;
+    private List<Inventory> InvList;
 
-    public InventoryAdapter(Context context, List<Inventory> inventoryList){
+    public InvListAdapter(Context context, List<Inventory> InvList){
         this.context = context;
-        this.inventoryList = inventoryList;
+        this.InvList = InvList;
     }
 
     //출력할 총 갯수를 설정
     @Override
     public int getCount() {
-        return inventoryList.size();
+        return InvList.size();
     }
 
-    //특정 재고를 반환하는 메소드
+    //특정 매장을 반환하는 메소드
     @Override
     public Object getItem(int i){
-        return inventoryList.get(i);
+        return InvList.get(i);
     }
 
     @Override
@@ -41,11 +41,12 @@ public class InventoryAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup){
         View v = View.inflate(context, R.layout.inventory, null);
 
-        TextView inv_name = (TextView) v.findViewById(R.id.tv_invName);
-        TextView inv_count = (TextView) v.findViewById(R.id.tv_invCount);
+        TextView inv_Name = (TextView)v.findViewById(R.id.tv_invName);
+        TextView inv_Count = (TextView)v.findViewById(R.id.tv_invCount);
 
-        inv_name.setText(inventoryList.get(i).getInv_name());
-        inv_count.setText(inventoryList.get(i).getInv_count());
+        inv_Name.setText(InvList.get(i).getInv_name());
+        inv_Count.setText(InvList.get(i).getInv_count());
+
         return v;
 
     }

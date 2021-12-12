@@ -3,24 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation = "vertical"
     android:background="#ffffff"
-    >
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/Shop_Name"
-        android:text="매장이름"
-        android:textSize="20dp"
-        />
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="매장이름"
+        android:textSize="20dp" />
+
+    <TextView
         android:id="@+id/Shop_Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="주소"
-        android:textSize="16dp"
-        />
+        android:textSize="16dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,8 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="닫는 시간 : "
-            android:textSize="12dp"
-            />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/SHop_Closetime"
